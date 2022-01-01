@@ -1,0 +1,15 @@
+name: 'Pull request name GitHub Action'
+description: 'Pull request name GitHub Action'
+inputs:
+  repo-token:
+    description: 'github token'
+    required: true
+  branch-name:
+    description: 'branch name'
+    required: true
+  owner-token:
+    description: 'owner-token'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
