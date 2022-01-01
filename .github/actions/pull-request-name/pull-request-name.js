@@ -1,11 +1,10 @@
-import {isValidTitle, isValidUserName} from '../titile.utils'
-
 const core = require('@actions/core')
 const github = require('@actions/github')
+const titleUtils = require('../title.utils')
 
 function isValidPullRequestName(title) {
   const parts = title.split('/')
-  return isValidUserName(parts[0]) && isValidTitle(parts[1])
+  return titleUtils.isValidUserName(parts[0]) && titleUtils.isValidPRName(parts[1])
 }
 
 function run() {

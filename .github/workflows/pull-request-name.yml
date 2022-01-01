@@ -11,5 +11,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - run: npm ci
       - name: Verify Pull Request Name
         uses: ./.github/actions/pull-request-name

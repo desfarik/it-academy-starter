@@ -1,6 +1,6 @@
 const core = require('@actions/core')
 import * as github from '@actions/github'
-import { verifyUserName } from '../titile.utils'
+import { verifyUserName } from '../title.utils'
 
 const DOES_NOT_MATCH = 'не соотвествует [см. README](https://github.com/desfarik/it-academy-156-21/blob/master/README.md)'
 
