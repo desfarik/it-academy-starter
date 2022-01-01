@@ -1,4 +1,4 @@
-name: Pull Request Name
+name: JS Linter
 
 on:
   pull_request:
@@ -12,5 +12,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - run: npm ci --no-audit --prefer-offline
-      - name: Verify Pull Request Name
-        uses: ./.github/actions/pull-request-name
+      - run: git fetch origin master:refs/remotes/origin/master
+      - name: Verify diff files
+        run: npm run lint-js-diff

@@ -2,26 +2,22 @@
   "name": "it-academy",
   "version": "1.0.0",
   "scripts": {
-    "lint": "npm run lint-html && npm run lint-css && npm run lint-js",
-    "lint-html": "linthtml src/**/*.html",
-    "lint-css": "stylelint **/*.css",
-    "lint-js": "eslint --ext .js src/",
-    "build": "webpack --config webpack.config.js"
-  },
-  "dependencies": {
-    "@actions/core": "^1.4.0",
-    "@actions/github": "^5.0.0"
+    "lint-html": "html-validate src/",
+    "lint-css": "npx stylelint src/**/*.css",
+    "lint-js": "eslint src/",
+    "lint-html-diff": "bash .github/lint-html.sh",
+    "lint-css-diff": "bash .github/lint-css.sh",
+    "lint-js-diff": "bash .github/lint-js.sh"
   },
   "devDependencies": {
-    "@linthtml/linthtml": "^0.7.0",
-    "eslint-config-standard": "^16.0.2",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.3.1",
-    "stylelint": "^13.13.0",
-    "stylelint-config-standard": "^22.0.0",
-    "webpack": "4.46.0",
-    "webpack-cli": "^4.7.2",
-    "@types/node": "14.14.37"
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0",
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-import": "^2.25.4",
+    "html-validate": "^6.1.6",
+    "stylelint": "^14.2.0",
+    "stylelint-config-standard": "^24.0.0"
   }
 }

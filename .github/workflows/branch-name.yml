@@ -1,4 +1,4 @@
-name: Pull Request Name
+name: Branch Name
 
 on:
   pull_request:
@@ -12,5 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - run: npm ci --no-audit --prefer-offline
-      - name: Verify Pull Request Name
-        uses: ./.github/actions/pull-request-name
+      - name: Verify Branch Name
+        uses: ./.github/actions/branch-name
+        with:
+          branch-name: "${{ github.head_ref }}"
