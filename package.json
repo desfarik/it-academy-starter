@@ -2,7 +2,6 @@
   "name": "it-academy",
   "version": "1.0.0",
   "scripts": {
-    "lint": "npm run lint-html && npm run lint-css && npm run lint-js",
     "lint-html": "linthtml src/**/*.html",
     "lint-css": "stylelint **/*.css",
     "lint-js-all": "eslint src/",
