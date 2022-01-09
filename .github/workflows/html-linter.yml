@@ -11,11 +11,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-          cache: 'npm'
-      - run: npm install --no-audit --prefer-offline
+      - run: npm ci --no-audit --prefer-offline
       - run: git fetch origin master:refs/remotes/origin/master
       - name: Verify diff files
         run: npm run lint-js-diff
