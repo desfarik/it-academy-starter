@@ -11,7 +11,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - run: npm ci --no-audit --prefer-offline
+      - run: rm -rf package.json package-lock.json
+      - run: npm i --no-audit html-validate
       - run: git fetch origin master:refs/remotes/origin/master
       - name: Verify diff files
-        run: npm run lint-js-diff
+        run: bash .github/lint-html.sh
