@@ -1,4 +1,4 @@
-name: JS Linter
+name: HTML Linter
 
 on:
   pull_request:
